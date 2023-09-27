@@ -31,9 +31,9 @@ while True:
 		print(f'here(Hp:{MtH}, attck:{Hatt}) faill <-> monster(HP:{HtM}, attck:{Matt}) faill')
 	if HHP<=0:
 		print('------------------------------------------------------------')
-		print(f'Total phase: {cnt}\nHere Win!!!')
+		print(f'Total phase: {cnt}\nMonster Win!!!')
 		break
 	elif MHP<=0:
 		print('------------------------------------------------------------')
-		print(f'Total phase: {cnt}\nMonster Win!!!')
+		print(f'Total phase: {cnt}\nHere Win!!!')
 		break
