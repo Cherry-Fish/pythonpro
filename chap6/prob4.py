@@ -5,7 +5,7 @@ words = list(random.choice(Words))
 #-으로 전부 초기화
 EWords = ["-" for i in range(len(words))]
 a = [] #정답이 될 것
-YN = False
+YN = "N"
 cnt = 0
 
 hangman = ["",
@@ -16,7 +16,7 @@ hangman = ["",
            "|______"]
 
 
-while True:
+while "T":
     
     chr = input("Enter your guess: ")
     a.append(chr)
@@ -24,16 +24,15 @@ while True:
     for i in range(len(words)):
         if(words[i] == chr):
             EWords[i] = chr
-            YN = True
+            YN = "Y"
 
-    if YN == True:
+    if YN == "Y":
         print("Yes!",chr,"is in the word!")
-        YN = False
+        YN = "N"
 
     else :
         print("No!",chr,"is not in the word!")
         cnt+=1
-    
     if cnt == 1:
         hangman[1]="|    | "
     elif cnt == 2:
@@ -48,10 +47,8 @@ while True:
         hangman[4]="|   / "
     elif cnt == 7:
         hangman[4]="|   /|"
-
     for i in range(len(hangman)):
             print(hangman[i]) #메인 스크린 출력
-
     if cnt == 7 :
         print("\nGame Over!")
         break
