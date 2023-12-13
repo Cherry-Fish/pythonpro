@@ -78,28 +78,27 @@ class Positionable_Card(Card):
 
 
 deck1 = Deck()
-  # <empty>
 
 deck1.populate()
-  # ordered deck
 
 deck1.shuffle()
-  # shuffled deck
+  
 palyer1 = input("palyer1 name : ")
 palyer2 = input("palyer2 name : ")
-
+Dealer="Dealer"
 
 palyer1_Hand = Hand()
 palyer2_Hand = Hand()
 Dealer_Hand = Hand()
 
 
-
-hands = [palyer1_Hand, palyer2_Hand, Dealer_Hand]
+hands = [palyer1_Hand, palyer2_Hand]
 deck1.deal(hands, per_hand = 2)
-print (palyer1,palyer1_Hand,)
-print (palyer2,palyer2_Hand,)
-print (Dealer_Hand)
+print (palyer1,palyer1_Hand)
+print (palyer2,palyer2_Hand)
+print (Dealer,Dealer_Hand)
+
+
 
 
 
